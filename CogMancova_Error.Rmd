@@ -1,0 +1,48 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+install.packages(jmv)
+library(jmv)
+
+Cog_tests <- read.csv("Complete_COBRE_cog.csv", row.names = 1)
+
+View(Cog_tests)
+
+man_out_Cog1 = mancova(Cog_tests,deps=vars(FAcomp6, FAcomp11, FAcomp12,GMcomp6, GMcomp9, GMcomp11), factors = c('Status', 'Gender'), covs = c('Age','WTAR_StandardScore','WASI_Vocab_TScore','WASI_Similarities_TScore','WASI_Verbal_TScore', 'WASI_BlockDesign_TScore', 'WASI_MatrixReasoning_TScore',	'WASI_Performance_TScore',	'WAIS_SymbolSearch_ScaleScore',	'WAIS_Coding_ScaleScore',	'TMT_A_TScore','BACS_SC_TScore',	'HVLT_Trials_TScore',	'HVLT_Delay_TScore','HVLT_DI_TScore',	'WMSIII_SS_TScore', 'LNS_TScore',	'NAB_Mazes_TScore',	'BVMT_Trials_TScore',	'BVMT_Trials_Delay_TScore',	'FAS_Sum_TScore','Animal_Fluency_TScore',	'MSCEIT_TScore',	'CPTIP_TScore','CPTII_V5_Omissions_TScore',	'CPTII_V5_Comissions_TScore','CPTII_V5_Hit_RT_TScore',	'CPTII_V5_Hit_StdError_TScore',	'CPTII_V5_Variability_TScore',	'CPTII_V5_Detectability_TScore',	'CPTII_V5_ResponseStyle_TScore','CPTII_V5_Perseverations_TScore',	'CPTII_V5_Hit_RT_BlockChange_TScore',	'CPTII_V5_Hit_SE_BlockChange_TScore','CPTII_V5_Hit_RT_ISI_Change_TScore',	'CPTII_V5_Hit_SE_ISI_Change_TScore','MatricsDomain_ProcessingSpeed_TScore',	'MatricsDomain_AttentionVigilance_TScore',	'MatricsDomain_WorkingMemory_TScore',	'MatricsDomain_VerbalLearning_TScore',	'MatricsDomain_VisualLearning_TScore','MatricsDomain_ReasoningProblemSolving_TScore',	'MatricsDomain_SocialCognition_TScore',	'MatricsDomain_OverallCompositeScore_TScore'))
+man_out_Cog1
+
+
+```
+```{r}
+man_out_Cog2 = mancova(Cog_tests,deps=vars(FAcomp6, FAcomp11, FAcomp12,GMcomp6, GMcomp9, GMcomp11), factors = c('Status', 'Gender'), covs = c('Age','WTAR_StandardScore','WASI_Vocab_TScore','WASI_Similarities_TScore','WASI_Verbal_TScore'))
+man_out_Cog2
+```
+```{r}
+man_out_Cog3 = mancova(Cog_tests,deps=vars(FAcomp6, FAcomp11, FAcomp12,GMcomp6, GMcomp9, GMcomp11), factors = c('Status', 'Gender'), covs = c('Age','WTAR_StandardScore','WASI_Vocab_TScore','WASI_Similarities_TScore','WASI_Verbal_TScore', 'WASI_BlockDesign_TScore'))
+man_out_Cog3
+```
+```{r}
+man_out_Cog4 = mancova(Cog_tests,deps=vars(FAcomp6, FAcomp11, FAcomp12,GMcomp6, GMcomp9, GMcomp11), factors = c('Status', 'Gender'), covs = c('Age','WTAR_StandardScore','WASI_Vocab_TScore','WASI_Similarities_TScore','WASI_Verbal_TScore', 'WASI_BlockDesign_TScore', 'WASI_MatrixReasoning_TScore'))
+man_out_Cog4
+```
+```{r}
+man_out_Cog5 = mancova(Cog_tests,deps=vars(FAcomp6, FAcomp11, FAcomp12,GMcomp6, GMcomp9, GMcomp11), factors = c('Status', 'Gender'), covs = c('Age','WTAR_StandardScore','WASI_Vocab_TScore','WASI_Similarities_TScore','WASI_Verbal_TScore', 'WASI_BlockDesign_TScore', 'WASI_MatrixReasoning_TScore', 'WASI_Performance_TScore'))
+man_out_Cog5
+```
+```{r}
+
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
